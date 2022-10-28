@@ -1,1 +1,27 @@
 /* Dashboard */
+.dashboard-card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  width: 85rem;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 3%;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 2rem 2rem;
+  min-height: max-content;
+  background-color: #95cee0;
+  border-radius: 10px;
+}
+
+.text-format {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #052f55;
+}
+
+.image-format {
+  width: auto;
+  height: 55rem;
+  float: center;
+}

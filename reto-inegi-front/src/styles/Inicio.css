@@ -1,37 +1,36 @@
 /* Inicio */
 .inicio-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem 0 2rem 0;
-    min-height: max-content;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0 2rem 0;
+  min-height: max-content;
+}
+
 .description-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-    overflow-y: auto;
-    width: 35rem;
-    height: 65rem;
-    overflow-y: auto;
-    background-color: #95cee0;
-    border-radius: 10px;
-    box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
-    padding: 0 1rem 0 1rem;
-  }
-  
-  .text-format {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #052F55;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+  width: 35rem;
+  height: 65rem;
+  overflow-y: auto;
+  background-color: #95cee0;
+  border-radius: 10px;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+  padding: 0 1rem 0 1rem;
+}
 
+.text-format {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #052f55;
+}
 
-  .images-format {
-    width: auto;
-    height: 40rem
-  }
+.images-format {
+  width: auto;
+  height: 40rem;
+}
