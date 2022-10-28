@@ -23,3 +23,10 @@
     background-color: #706F6F;
     color: #FFFF;
   }
+
+
+  .logo-image {
+    width: auto;
+    height: 5rem;
+    float: left;
+  }
