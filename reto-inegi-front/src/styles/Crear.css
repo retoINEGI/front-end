@@ -24,3 +24,20 @@
   box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
   padding: 0 1rem 0 1rem;
 }
+
+.text-format {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #052f55;
+}
+
+.graphic-format {
+  width: auto;
+  height: 25rem;
+  float: center;
+}
+
+.image-bot-format {
+  width: auto;
+  height: 25rem;
+  float: center;
+}

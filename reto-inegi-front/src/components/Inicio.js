@@ -1,14 +1,12 @@
 import "../styles/Inicio.css";
-import inegi from "../images/inicio-inegi.png"
-import tableau from "../images/inicio-tableau.jpg"
-import salesforce from "../images/inicio-salesforce.png"
-
-
-
+import inegi from "../images/inicio-inegi.png";
+import tableau from "../images/inicio-tableau.jpg";
+import salesforce from "../images/inicio-salesforce.png";
 
 const Inicio = () => {
   return (
     <div>
+      <h1 className="text-format">Inicio</h1>
       <div className="inicio-card-container">
         <div className="description-container">
           <h1 className="text-format">NLP para INEGI</h1>
@@ -44,7 +42,9 @@ const Inicio = () => {
           </p>
         </div>
         <div className="description-container">
-          
+          <img src={inegi} className="images-format" alt="" />{" "}
+          <img src={tableau} className="images-format" alt="" />{" "}
+          <img src={salesforce} className="images-format" alt="" />
         </div>
       </div>
     </div>
