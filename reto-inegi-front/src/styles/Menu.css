@@ -1,1 +1,25 @@
 /* Menu */
+
+.barra-navegacion {
+    background-color: #FFFF;
+    overflow: hidden;
+  }
+  
+  .barra-navegacion a{
+    float: right;
+    color: #706F6F;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .barra-navegacion a:hover{
+    background-color: #706F6F;
+    color: #FFFF;
+  }
+  
+  .barra-navegacion a.active{
+    background-color: #706F6F;
+    color: #FFFF;
+  }

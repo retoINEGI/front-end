@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
+import "../styles/Menu.css"
 
 const Menu = () => {
   return (
     <div>
-      <nav className="navigation">
-        <NavLink to="/">Inicio</NavLink>
+      <nav className="barra-navegacion">
+        <NavLink to="inicio">Inicio</NavLink>
         <NavLink to="crear">Crear</NavLink>
         <NavLink to="dashboard">Dashboard</NavLink>
       </nav>
-      <h1>Menu</h1>
     </div>
   );
 };
