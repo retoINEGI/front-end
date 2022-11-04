@@ -1,4 +1,11 @@
-/* Crear */
+/*
+Nombre del archivo: Crear.css
+Fecha de creación: 28-10-2022
+
+Archivo de estilos para desplegar los elementos HTML de Crear.js.
+*/
+
+
 .crear-card-container {
   display: flex;
   justify-content: center;

@@ -1,3 +1,12 @@
+/*
+Nombre del archivo: Crear.js
+Fecha de creación: 28-10-2022
+
+Página que permitirá al usuario crear gráficas con un dataset de 
+entrada y a través de un chatbot en Amazon Lex.
+*/
+
+
 import "../styles/Crear.css";
 import ejemploChatbot from "../images/ejemplo_chatbot.png";
 import ejemploGrafica from "../images/ejemplo_grafica.png";

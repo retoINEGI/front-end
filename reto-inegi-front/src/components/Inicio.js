@@ -1,3 +1,11 @@
+/*
+Nombre del archivo: Inicio.js
+Fecha de creación: 28-10-2022
+
+Página que dará una descripción al usuario sobre la funcionalidad
+de la interfaz y sus objetivos.
+*/
+
 import "../styles/Inicio.css";
 import inegi from "../images/inicio-inegi.png";
 import tableau from "../images/inicio-tableau.jpg";

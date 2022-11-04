@@ -1,4 +1,9 @@
-/* Inicio */
+/* 
+Nombre del archivo: Inicio.css
+Fecha de creación: 28-10-2022
+
+Archivo de estilos para desplegar los elementos HTML de Inicio.js.
+*/
 .inicio-card-container {
   display: flex;
   justify-content: center;

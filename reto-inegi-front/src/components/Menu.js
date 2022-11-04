@@ -1,3 +1,10 @@
+/*
+Nombre del archivo: Menu.js
+Fecha de creación: 28-10-2022
+
+Barra de navegación de la interfaz.
+*/
+
 import { NavLink } from "react-router-dom";
 import "../styles/Menu.css";
 import logo from "../images/logo_INEGI.jpg"
