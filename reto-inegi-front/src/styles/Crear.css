@@ -24,7 +24,7 @@ Archivo de estilos para desplegar los elementos HTML de Crear.js.
   gap: 1.5rem;
   overflow-y: auto;
   width: 35rem;
-  height: 65rem;
+  height: 40rem;
   overflow-y: auto;
   background-color: #95cee0;
   border-radius: 10px;
@@ -47,4 +47,9 @@ Archivo de estilos para desplegar los elementos HTML de Crear.js.
   width: auto;
   height: 25rem;
   float: center;
+}
+
+.bot {
+  height: 25rem;
+  width: 30rem;
 }
