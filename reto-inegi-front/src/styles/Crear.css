@@ -55,6 +55,33 @@ Archivo de estilos para desplegar los elementos HTML de Crear.js.
 }
 
 
+.file-select{
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #ffff;
+  background-color: #95cee0;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+}
+
+
+.file-select:hover {background-color: #81C1D5}
+
+.file-select:active {
+  background-color: #95cee0;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+  transform: translateY(4px);
+}
+
+
+
 .upload-btn {
   display: inline-block;
   padding: 10px 15px;
@@ -67,6 +94,7 @@ Archivo de estilos para desplegar los elementos HTML de Crear.js.
   background-color: #95cee0;
   border: none;
   border-radius: 10px;
+  margin: 10px;
   box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
 }
 

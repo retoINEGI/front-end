@@ -75,8 +75,8 @@ const Crear = () => {
     <div>
       <h1 className="text-format">Crear</h1>
       <p>Sube el dataset con el que generaras tus graficas</p>
-      <input type="file"  id="fileToUpload" />
-      <button onClick={() => uploadMedia()} className="upload-btn">Subir</button>
+      <input type="file" id="fileToUpload" className="file-select"/>
+      <button onClick={() => uploadMedia()} className="upload-btn">Upload</button>
       <div className="crear-card-container">
         <div className="bot-container">
           <h1 className="text-format">Bot</h1>
