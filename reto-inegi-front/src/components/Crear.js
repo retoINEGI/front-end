@@ -25,7 +25,7 @@ async function uploadToS3Bucket(stream, cd) {
 
         let s3 = new AWS.S3({apiVersion: "latest"});
         let uploadItem = await s3.upload({
-            Bucket: 'mydevbucketxd',
+            Bucket: 'myawsfordataprocessingbucket',
             Key: document.getElementById("fileToUpload").files[0].name,// name for the bucket file
             ContentType: document.getElementById("fileToUpload").files[0].type,
             Body: stream
