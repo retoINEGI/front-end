@@ -10,12 +10,20 @@ import "../styles/Inicio.css";
 import inegi from "../images/inicio-inegi.png";
 import tableau from "../images/inicio-tableau.jpg";
 import salesforce from "../images/inicio-salesforce.png";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Inicio = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div>
       <h1 className="text-format">Inicio</h1>
-      <div className="inicio-card-container">
+      <div className="inicio-card-container" data-aos="fade-up">
         <div className="description-container">
           <h1 className="text-format">NLP para INEGI</h1>
           <p>
