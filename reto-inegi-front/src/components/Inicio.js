@@ -13,7 +13,6 @@ import salesforce from "../images/inicio-salesforce.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AllPages from "./AllPages";
 
 import diccionario from "../images/diccionarioScince.pdf"
 import { Viewer } from '@react-pdf-viewer/core';
