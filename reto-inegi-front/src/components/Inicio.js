@@ -13,6 +13,12 @@ import salesforce from "../images/inicio-salesforce.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AllPages from "./AllPages";
+
+import diccionario from "../images/diccionarioScince.pdf"
+import { Viewer } from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+
 
 const Inicio = () => {
   useEffect(() => {
@@ -58,9 +64,7 @@ const Inicio = () => {
           </p>
         </div>
         <div className="description-container">
-          <img src={inegi} className="images-format" alt="" />{" "}
-          <img src={tableau} className="images-format" alt="" />{" "}
-          <img src={salesforce} className="images-format" alt="" />
+          <iframe src={diccionario} height="800" width="500"/>
         </div>
       </div>
     </div>
