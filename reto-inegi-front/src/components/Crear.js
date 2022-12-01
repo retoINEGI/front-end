@@ -29,8 +29,8 @@ const Crear = () => {
     datasets: [
       {
         data: [],
-        backgroundColor: ["#DE8910"],
-        borderColor: ["#DE8910"],
+        backgroundColor: ["#DE8910", "#005791"],
+        borderColor: ["#DE8910", "#005791"],
         borderWidth: 1,
       },
     ],
@@ -59,8 +59,8 @@ const Crear = () => {
           datasets: [
             {
               data: result.y,
-              backgroundColor: ["#DE8910"],
-              borderColor: ["#DE8910"],
+              backgroundColor: ["#DE8910", "#005791"],
+              borderColor: ["#DE8910", "#005791"],
               borderWidth: 1,
             },
           ],
