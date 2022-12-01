@@ -45,7 +45,7 @@ const Crear = () => {
     };
 
     fetch(
-      "https://retoinegibucket.s3.us-west-2.amazonaws.com/bot_response.txt?X-Amz-Expires=86400&X-Amz-Date=20221201T015542Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARXWBOEHYDWOTTUYO%2F20221201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=bba5e1ae156daedcdbc0b14a461464d539dd9da17b16c697a9c7fa7e4870e224",
+      "https://retoinegibucket.s3.us-west-2.amazonaws.com/bot_response.txt?X-Amz-Expires=86400&X-Amz-Date=20221201T172029Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARXWBOEHYDWOTTUYO%2F20221201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=71a97ccf1a47a93fbd151bd82ace0c8622802bd7afd1c2ade68e5d22895d87c5",
       requestOptions
     )
       .then((response) => response.text())
