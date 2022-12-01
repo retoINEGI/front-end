@@ -6,7 +6,6 @@ Página que permitirá ver al usuario las gráficas que ha creado.
 */
 
 import "../styles/Dashboard.css";
-import tableau from "../images/inicio-tableau.jpg";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +20,12 @@ const Dashboard = () => {
     <div>
       <h1 className="text-format">Dashboard</h1>
       <div className="dashboard-card-container" data-aos="fade-up">
-        <img src={tableau} className="image-format" alt="" />
+        <center>
+          <tableau-viz
+            id="tableauViz"
+            src="https://public.tableau.com/views/RetoDashboardFINAL/Dashboard1"
+          ></tableau-viz>
+        </center>
       </div>
     </div>
   );
