@@ -11,6 +11,11 @@ import AWS from "aws-sdk";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Bar } from "react-chartjs-2";
+import Chart from "chart.js/auto";
+
+// Define a color
+Chart.defaults.color = "#9facbd";
 
 const Crear = () => {
   useEffect(() => {
@@ -19,6 +24,20 @@ const Crear = () => {
   }, []);
 
   const [result, setResult] = useState(null);
+  const [grafica, setGrafica] = useState(
+    {
+      labels: [],
+      datasets: [
+        {
+          data: [],
+          backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+          borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+          borderWidth: 1,
+        },
+      ],
+    }
+  );
+
 
   // Función para obtener la respuesta del bot y graficar
   const graficar = () => {
@@ -32,12 +51,55 @@ const Crear = () => {
       requestOptions
     )
       .then((response) => response.text())
-      .then((result) => {
-        console.log(result);
-        setResult(result);
+      .then((resultado) => {
+        //console.log(JSON.parse(result));
+        console.log(resultado);
+        setResult(JSON.parse(resultado));
+        console.log(result.x);
+        console.log(result.y);
+        setGrafica(
+          {
+            labels: result.x,
+            datasets: [
+              {
+                data: result.y,
+                backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+                borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+                borderWidth: 1,
+              },
+            ],
+          }
+        );
+
+        //setResult(JSON.parse(result));
+        //console.log(result.x)
+        //setDatos(JSON.stringify(result));
       })
       .catch((error) => console.log("error", error));
+
+      
+
   };
+
+  
+  
+  // Data graph
+  
+  /*
+  grafica = {
+    labels: result.x,
+    datasets: [
+      {
+        data: result.y,
+        backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+        borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
+        borderWidth: 1,
+      },
+    ],
+  };
+  */
+
+
 
   let isConfigUpdate = false;
 
@@ -123,7 +185,29 @@ const Crear = () => {
           <button onClick={() => graficar()} className="graficar-btn">
             Ver Gráfica
           </button>
-          <h1>{result}</h1>
+          
+          <div>
+            <Bar
+              style={{ height: "15rem" }}
+              data={grafica}
+              options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                  legend: {
+                    display: false,
+                    position: "up",
+                  },
+                  title: {
+                    display: true,
+                    fontSize: 20,
+                    text: "Ejemplo",
+                    fontColor: "#9facbd",
+                  },
+                },
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
