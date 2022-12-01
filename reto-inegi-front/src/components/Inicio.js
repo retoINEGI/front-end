@@ -58,7 +58,7 @@ const Inicio = () => {
           </p>
         </div>
         <div className="description-container">
-          <h1 className="text-format">NLP para INEGI</h1>
+          <h1 className="text-format">Guía de Usuario</h1>
           <iframe
             title="Diccionario"
             src={diccionario}
