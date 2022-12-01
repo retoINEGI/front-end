@@ -15,7 +15,7 @@ import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 // Define a color
-Chart.defaults.color = "#9facbd";
+Chart.defaults.color = "#000000";
 
 const Crear = () => {
   useEffect(() => {
@@ -24,20 +24,17 @@ const Crear = () => {
   }, []);
 
   const [result, setResult] = useState(null);
-  const [grafica, setGrafica] = useState(
-    {
-      labels: [],
-      datasets: [
-        {
-          data: [],
-          backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-          borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-          borderWidth: 1,
-        },
-      ],
-    }
-  );
-
+  const [grafica, setGrafica] = useState({
+    labels: [],
+    datasets: [
+      {
+        data: [],
+        backgroundColor: ["#DE8910"],
+        borderColor: ["#DE8910"],
+        borderWidth: 1,
+      },
+    ],
+  });
 
   // Función para obtener la respuesta del bot y graficar
   const graficar = () => {
@@ -57,34 +54,27 @@ const Crear = () => {
         setResult(JSON.parse(resultado));
         console.log(result.x);
         console.log(result.y);
-        setGrafica(
-          {
-            labels: result.x,
-            datasets: [
-              {
-                data: result.y,
-                backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-                borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-                borderWidth: 1,
-              },
-            ],
-          }
-        );
+        setGrafica({
+          labels: result.x,
+          datasets: [
+            {
+              data: result.y,
+              backgroundColor: ["#DE8910"],
+              borderColor: ["#DE8910"],
+              borderWidth: 1,
+            },
+          ],
+        });
 
         //setResult(JSON.parse(result));
         //console.log(result.x)
         //setDatos(JSON.stringify(result));
       })
       .catch((error) => console.log("error", error));
-
-      
-
   };
 
-  
-  
   // Data graph
-  
+
   /*
   grafica = {
     labels: result.x,
@@ -98,8 +88,6 @@ const Crear = () => {
     ],
   };
   */
-
-
 
   let isConfigUpdate = false;
 
@@ -185,7 +173,7 @@ const Crear = () => {
           <button onClick={() => graficar()} className="graficar-btn">
             Ver Gráfica
           </button>
-          
+
           <div>
             <Bar
               style={{ height: "15rem" }}
@@ -201,7 +189,7 @@ const Crear = () => {
                   title: {
                     display: true,
                     fontSize: 20,
-                    text: "Ejemplo",
+                    text: "Gráfico",
                     fontColor: "#9facbd",
                   },
                 },
