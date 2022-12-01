@@ -9,8 +9,8 @@ Archivo de estilos para desplegar los elementos HTML de Dashboard.js.
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  width: 100rem;
-  margin-left: 11%;
+  width: 85rem;
+  margin-left: 2.5%;
   margin-right: 2.5%;
   margin-bottom: 3%;
   flex-wrap: wrap;

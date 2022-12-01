@@ -7,17 +7,12 @@ de la interfaz y sus objetivos.
 */
 
 import "../styles/Inicio.css";
-import inegi from "../images/inicio-inegi.png";
-import tableau from "../images/inicio-tableau.jpg";
-import salesforce from "../images/inicio-salesforce.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import diccionario from "../images/diccionarioScince.pdf"
-import { Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-
+import diccionario from "../images/diccionarioScince.pdf";
+import "@react-pdf-viewer/core/lib/styles/index.css";
 
 const Inicio = () => {
   useEffect(() => {
@@ -63,7 +58,13 @@ const Inicio = () => {
           </p>
         </div>
         <div className="description-container">
-          <iframe src={diccionario} height="800" width="500"/>
+          <h1 className="text-format">NLP para INEGI</h1>
+          <iframe
+            title="Diccionario"
+            src={diccionario}
+            height="500"
+            width="500"
+          />
         </div>
       </div>
     </div>
