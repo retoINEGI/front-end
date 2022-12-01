@@ -11,7 +11,7 @@ import AWS from "aws-sdk";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Bar } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 // Define a color
@@ -35,6 +35,7 @@ const Crear = () => {
       },
     ],
   });
+  const [tipoGrafica, setTipografica] = useState(null);
 
   // Función para obtener la respuesta del bot y graficar
   const graficar = () => {
@@ -49,11 +50,16 @@ const Crear = () => {
     )
       .then((response) => response.text())
       .then((resultado) => {
-        //console.log(JSON.parse(result));
         console.log(resultado);
         setResult(JSON.parse(resultado));
         console.log(result.x);
         console.log(result.y);
+        var x = result.x;
+        if (x.length > 1) {
+          setTipografica("Bar");
+        } else {
+          setTipografica("Doughnut");
+        }
         setGrafica({
           labels: result.x,
           datasets: [
@@ -65,29 +71,9 @@ const Crear = () => {
             },
           ],
         });
-
-        //setResult(JSON.parse(result));
-        //console.log(result.x)
-        //setDatos(JSON.stringify(result));
       })
       .catch((error) => console.log("error", error));
   };
-
-  // Data graph
-
-  /*
-  grafica = {
-    labels: result.x,
-    datasets: [
-      {
-        data: result.y,
-        backgroundColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-        borderColor: ["#9facbd", "rgba(54, 162, 235, 0)"],
-        borderWidth: 1,
-      },
-    ],
-  };
-  */
 
   let isConfigUpdate = false;
 
@@ -175,26 +161,50 @@ const Crear = () => {
           </button>
 
           <div>
-            <Bar
-              style={{ height: "15rem" }}
-              data={grafica}
-              options={{
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                  legend: {
-                    display: false,
-                    position: "up",
+            {tipoGrafica === "Bar" && (
+              <Bar
+                style={{ height: "15rem" }}
+                data={grafica}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      display: false,
+                      position: "up",
+                    },
+                    title: {
+                      display: true,
+                      fontSize: 20,
+                      text: "Gráfico",
+                      fontColor: "#9facbd",
+                    },
                   },
-                  title: {
-                    display: true,
-                    fontSize: 20,
-                    text: "Gráfico",
-                    fontColor: "#9facbd",
+                }}
+              />
+            )}
+            {tipoGrafica === "Doughnut" && (
+              <Doughnut
+                style={{ height: "15rem" }}
+                data={grafica}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      display: false,
+                      position: "up",
+                    },
+                    title: {
+                      display: true,
+                      fontSize: 20,
+                      text: result.x + " - " + result.y,
+                      fontColor: "#9facbd",
+                    },
                   },
-                },
-              }}
-            />
+                }}
+              />
+            )}
           </div>
         </div>
       </div>
