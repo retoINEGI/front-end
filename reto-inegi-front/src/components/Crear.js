@@ -11,7 +11,7 @@ import AWS from "aws-sdk";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut, Pie } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 // Define a color
@@ -45,7 +45,7 @@ const Crear = () => {
     };
 
     fetch(
-      "https://retoinegibucket.s3.us-west-2.amazonaws.com/bot_response.txt?X-Amz-Expires=86400&X-Amz-Date=20221201T172029Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARXWBOEHYDWOTTUYO%2F20221201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=71a97ccf1a47a93fbd151bd82ace0c8622802bd7afd1c2ade68e5d22895d87c5",
+      "https://retoinegibucket.s3.us-west-2.amazonaws.com/bot_response.txt?X-Amz-Expires=86400&X-Amz-Date=20221202T010203Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARXWBOEHYDWOTTUYO%2F20221202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=28be70123cbe17e5331b0131a532eaa4b0fa92edf4b77872847fd9ae0bcfaaa4",
       requestOptions
     )
       .then((response) => response.text())
@@ -55,8 +55,11 @@ const Crear = () => {
         console.log(result.x);
         console.log(result.y);
         var x = result.x;
-        if (x.length > 1) {
+        console.log(x.length);
+        if (x.length > 1 && x.length !== 2) {
           setTipografica("Bar");
+        } else if (x.length === 2) {
+          setTipografica("Pie");
         } else {
           setTipografica("Doughnut");
         }
@@ -199,6 +202,28 @@ const Crear = () => {
                       display: true,
                       fontSize: 20,
                       text: result.x + " - " + result.y,
+                      fontColor: "#9facbd",
+                    },
+                  },
+                }}
+              />
+            )}
+            {tipoGrafica === "Pie" && (
+              <Pie
+                style={{ height: "15rem" }}
+                data={grafica}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      display: false,
+                      position: "up",
+                    },
+                    title: {
+                      display: true,
+                      fontSize: 20,
+                      text: "Femenino y Masculino",
                       fontColor: "#9facbd",
                     },
                   },
